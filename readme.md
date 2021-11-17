@@ -1,8 +1,8 @@
 # internally developed programs/scripts
 
-Q: Where do I install internally written programs/scripts?
+Q: Where do I install internally written programs/scripts on my system?
 
-A: Here!
+A: Here! (this readme should be placed in your designated folder $myorgdir)
 
 ## A suggested process that should allow for both ease of usage and flexibility
 
