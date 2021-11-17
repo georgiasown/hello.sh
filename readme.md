@@ -1,12 +1,21 @@
-# Template readme for "internal programs" folder
+# internally developed programs/scripts
 
-<!--might want to leave a copy of this in your "internal programs" folder ($myorgdir) to help others -->
+Q: Where do I install internally written programs/scripts?
+
+A: Here!
+
+## A suggested process that should allow for both ease of usage and flexibility
+
+- we want our programs to run naturally
+- we may need to have flexibility on the storage location, due to things such as containerization / cloud datastores etc.
 
 This folder houses internally developed scripts and programs for $myorgdir.
 This folder is meant to house production version of internally developed programs
 for system-wide (usr/local/bin) or root (usr/local/sbin) use.
 The scripts can be linked to directories to place them on the path or lib location
-usr/local/bin, usr/local/sbin, usr/local/lib - for example
+e.g. usr/local/bin, usr/local/sbin, usr/local/lib
+
+## example installation
 
 ```shell
 #set myorgdir variable to match your actual environment for example "/some/companyname"
@@ -28,4 +37,15 @@ sudo ln -s $myorgdir/usr/local/bin/hello.sh /usr/local/bin/hello.sh
 ls -al /usr/local/bin/hello.sh
 #run it
 hello.sh
+```
+
+## example uninstall
+
+```shell
+#set myorgdir variable to match your actual environment for example "/some/companyname"
+myorgdir=actualfoldernamehere
+#remove the symlinked version from path
+sudo rm /usr/local/bin/hello.sh
+#remove the program from $myorgdir completely...
+sudo rm $myorgdir/usr/local/bin/hello.sh
 ```
